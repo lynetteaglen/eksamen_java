@@ -11,7 +11,7 @@ public class EquipmentStorage {
     List<Ball> balls = new ArrayList<>();
     List<Racket> rackets = new ArrayList<>();
 
-    public void createObjects() {
+    public List<Ball> createBallObjects() {
         Ball ball1 = new Ball(12, "Locker 1", false, "Football", true);
         Ball ball2 = new Ball(15, "Locker 15", true, "Handball", true);
         Ball ball3 = new Ball(14, "Locker 2", true, "Handball", true);
@@ -27,10 +27,6 @@ public class EquipmentStorage {
         Ball ball13 = new Ball(32, "Locker 7", false, "Basketball", false);
         Ball ball14 = new Ball(33, "Locker 7", false, "Basketball", true);
         Ball ball15 = new Ball(34, "Locker 7", true, "Basketball", false);
-
-        Racket racket1 = new Racket(16, "Locker 5", false, false);
-        Racket racket2 = new Racket(17, "Locker 5", true, false);
-        Racket racket3 = new Racket(18, "Locker 5", false, true);
 
         balls.add(ball1);
         balls.add(ball2);
@@ -48,46 +44,58 @@ public class EquipmentStorage {
         balls.add(ball14);
         balls.add(ball15);
 
-        rackets.add(racket1);
-        rackets.add(racket2);
-        rackets.add(racket3);
-
-        for (Ball b : balls) {
-            System.out.println("ID: ");
-            System.out.println(b.getId());
-            System.out.println("Locker: ");
-            System.out.println(b.getLocker());
-            System.out.println("Replace: ");
-            System.out.println(b.replaceBall());
-            System.out.println("Type: ");
-            System.out.println(b.getTypeBall());
-            System.out.println("Maintenance");
-            System.out.println(b.replaceBall());
-            System.out.println("");
-        }
-
-        for (Racket r : rackets) {
-            System.out.println("ID: ");
-            System.out.println(r.getId());
-            System.out.println("Locker: ");
-            System.out.println(r.getLocker());
-            System.out.println("Needs to replace racket: ");
-            System.out.println(r.replaceRacket());
-            System.out.println("Needs to change coating: ");
-            System.out.println(r.changeCoating());
-            System.out.println("");
-        }
-
-
-    }
-
-    public List<Ball> getBallList() {
         return balls;
-    }
+        }
 
-    public List<Racket> getRacketList() {
-        return rackets;
-    }
+        public List<Racket> createRacketObjects() {
+            Racket racket1 = new Racket(16, "Locker 5", false, false);
+            Racket racket2 = new Racket(17, "Locker 5", true, false);
+            Racket racket3 = new Racket(18, "Locker 5", false, true);
+
+            rackets.add(racket1);
+            rackets.add(racket2);
+            rackets.add(racket3);
+
+            return rackets;
+        }
+
+        public void printBalls() {
+            for (Ball b : balls) {
+                System.out.println("ID: ");
+                System.out.println(b.getId());
+                System.out.println("Locker: ");
+                System.out.println(b.getLocker());
+                System.out.println("Replace: ");
+                System.out.println(b.replaceBall());
+                System.out.println("Type: ");
+                System.out.println(b.getTypeBall());
+                System.out.println("Maintenance");
+                System.out.println(b.replaceBall());
+                System.out.println("");
+            }
+        }
+
+        public void printRackets() {
+            for (Racket r : rackets) {
+                System.out.println("ID: ");
+                System.out.println(r.getId());
+                System.out.println("Locker: ");
+                System.out.println(r.getLocker());
+                System.out.println("Needs to replace racket: ");
+                System.out.println(r.replaceRacket());
+                System.out.println("Needs to change coating: ");
+                System.out.println(r.changeCoating());
+                System.out.println("");
+            }
+        }
+        public List<Ball> getBallList() {
+            return balls;
+        }
+
+        public List<Racket> getRacketList() {
+            return rackets;
+        }
+
 }
 
 
@@ -168,7 +176,7 @@ public class EquipmentStorage {
 
 
 
-}
+
 
 /*    static List<Ball> ballList = new ArrayList<Ball>();
 

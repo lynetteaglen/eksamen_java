@@ -6,11 +6,14 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         System.out.println("From main");
         EquipmentStorage equipments = new EquipmentStorage();
-        equipments.createObjects();
-        List<Ball> ballList = equipments.getBallList();
-        List<Racket> racketList = equipments.getRacketList();
+        List<Ball> ballList = equipments.createBallObjects();
+        List<Racket> racketList = equipments.createRacketObjects();
+        equipments.printBalls();
+        equipments.printRackets();
         Oppgave3 oppgave3 = new Oppgave3();
         oppgave3.printBallsNeedingMoreAir(ballList);
+        oppgave3.printEquipmentNeedingToBeReplaced(ballList, racketList);
+        oppgave3.printTableTennisRacketsNeedingNewPad(racketList);
         /*equipments.getEquipments();*/
         System.out.println("Main finished");
     }
