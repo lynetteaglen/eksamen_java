@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class EquipmentStorage  {
+public class EquipmentStorage {
 
     /*public EquipmentStorage(String filename) {this.fileName = fileName;}*/
     List<Ball> balls = new ArrayList<>();
@@ -13,8 +13,8 @@ public class EquipmentStorage  {
 
     public void createObjects() {
         Ball ball1 = new Ball(12, "Locker 1", false, "Football", true);
-        Ball ball2 = new Ball(15, "Locker 15", true, "Handball", true );
-        Ball ball3 = new Ball(14,"Locker 2", true, "Handball", true);
+        Ball ball2 = new Ball(15, "Locker 15", true, "Handball", true);
+        Ball ball3 = new Ball(14, "Locker 2", true, "Handball", true);
         Ball ball4 = new Ball(1, "Locker 3", false, "Handball", false);
         Ball ball5 = new Ball(2, "Locker 3", false, "Handball", true);
         Ball ball6 = new Ball(12, "Locker 1", false, "Fotball", false);
@@ -26,10 +26,10 @@ public class EquipmentStorage  {
         Ball ball12 = new Ball(31, "Locker 7", false, "Basketball", false);
         Ball ball13 = new Ball(32, "Locker 7", false, "Basketball", false);
         Ball ball14 = new Ball(33, "Locker 7", false, "Basketball", true);
-        Ball ball15 = new Ball(34 , "Locker 7", true, "Basketball", false);
+        Ball ball15 = new Ball(34, "Locker 7", true, "Basketball", false);
 
         Racket racket1 = new Racket(16, "Locker 5", false, false);
-        Racket racket2 = new Racket(17, "Locker 5", true, false );
+        Racket racket2 = new Racket(17, "Locker 5", true, false);
         Racket racket3 = new Racket(18, "Locker 5", false, true);
 
         balls.add(ball1);
@@ -57,13 +57,38 @@ public class EquipmentStorage  {
             System.out.println(b.getId());
             System.out.println("Locker: ");
             System.out.println(b.getLocker());
-   /*         System.out.println("Replace: ");
-            System.out.println(b.());
+            System.out.println("Replace: ");
+            System.out.println(b.replaceBall());
             System.out.println("Type: ");
-            System.out.println("Maintenance");*/
-
+            System.out.println(b.getTypeBall());
+            System.out.println("Maintenance");
+            System.out.println(b.replaceBall());
+            System.out.println("");
         }
+
+        for (Racket r : rackets) {
+            System.out.println("ID: ");
+            System.out.println(r.getId());
+            System.out.println("Locker: ");
+            System.out.println(r.getLocker());
+            System.out.println("Needs to replace racket: ");
+            System.out.println(r.replaceRacket());
+            System.out.println("Needs to change coating: ");
+            System.out.println(r.changeCoating());
+            System.out.println("");
+        }
+
+
     }
+
+    public List<Ball> getBallList() {
+        return balls;
+    }
+
+    public List<Racket> getRacketList() {
+        return rackets;
+    }
+}
 
 
 
@@ -93,7 +118,7 @@ public class EquipmentStorage  {
         scanner.close();
     }*/
 
-    private Ball readBall(Scanner scanner) {
+ /*   private Ball readBall(Scanner scanner) {
         int id = readInt(scanner);
         System.out.println(id);
 
@@ -103,7 +128,7 @@ public class EquipmentStorage  {
         String s = scanner.nextLine();
         System.out.println(locker);
         boolean replace = Boolean.parseBoolean(scanner.nextLine());
-        /*boolean replace = readBoolean(scanner);*/
+        *//*boolean replace = readBoolean(scanner);*//*
         System.out.println(replace);
         // FÅR IKKE LEST DEN - vet at det funket å lese string i locker variablen, men her går det ikke. Leser ikke scanner line by line?? H
         String type = readString(scanner);
@@ -138,7 +163,7 @@ public class EquipmentStorage  {
         return s;
     }
 
-
+*/
 
 
 
