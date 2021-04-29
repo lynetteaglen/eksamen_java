@@ -5,11 +5,10 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         System.out.println("From main");
         EquipmentStorage equipments = new EquipmentStorage();
-        equipments.ScanFile();
+        equipments.createObjects();
+        /*equipments.getEquipments();*/
         System.out.println("Main finished");
     }
-
-
 }
 
 

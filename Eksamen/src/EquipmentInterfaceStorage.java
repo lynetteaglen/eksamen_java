@@ -1,6 +1,7 @@
 import java.io.FileNotFoundException;
+import java.util.List;
 
 public interface EquipmentInterfaceStorage {
-   void getEquipment() throws FileNotFoundException;
+   List<Equipment> getEquipments() throws Exception;
 
 }
